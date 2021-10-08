@@ -1,0 +1,129 @@
+<!Doctype html>
+<html>
+    <title>
+        Order Now
+    </title>
+
+    <style>
+        body{
+    background-image: url('D:/project/back7.jpeg');
+background-repeat: no-repeat;
+background-position: center center;
+background-size:cover;
+background-attachment: fixed;
+  }
+       table
+        {   
+            width: 15cm;
+            text-align: start;
+            background-color: yellow;
+            border:1px solidblock; 
+            margin-left: auto;
+            margin-right: auto;
+        }
+        button{
+            background-color:rgb(6, 90, 6);
+            color: white;
+            padding: 15px 30px;
+            font-size: 16px;
+            margin-top: 30px;
+        }
+       body
+        {
+          background-color:gray;
+          text-align: center;
+          padding:50px,20px,50px,20px;
+        }
+    </style>
+<body>  
+<h2 >Select Your Food</h2>
+
+<table >
+<tr>
+    <th><h3>Veg</h3></th>
+    <th><h3>Non-Veg</h3></th>
+</tr>
+<tr>
+    <td><input  type="checkbox"  name="VEG" value="IDLY">Idly</td>
+    <td><input type="checkbox" name="NON-VEG" value="MUTTON">Mutton Briyani</td>
+    </tr>
+  
+<tr>
+<td><input  type="checkbox"name="VEG" value="DHOSA" >Dhosa</td>
+<td><input  type="checkbox"name="NON-VEG"  value="CHICKEN">Chicken Briyani</td>
+</tr>
+<tr>
+      <td><input   type="checkbox" name="NON-VEG"  value= "ONNION DHOSA ">Onnion Dhosa</td>
+       <td><input  type="checkbox"  name="NON-VEG"  value="CHICKEN KEBAB">Chicken kebab</td>
+        </tr>
+       <tr>
+            <td><input   type="checkbox" name="NON-VEG"  value="MASAL DHOSA" >Masal Dhosa</td>
+                <td><input   type="checkbox" name="NON-VEG"  value= "TANDOORI">Tandoori</td>
+            </tr>
+            <tr>
+                <td><input  type="checkbox" name="NON-VEG"  value= "FULL MEALS">Full meals</td>
+                <td><input  type="checkbox"name="NON-VEG"  value="FISH FRY">Fish Fry</td>
+                </tr>
+                <tr>
+                    <td><input   type="checkbox"name="NON-VEG"  value= "CHAPATHI">Chapathi</td>
+                    <td><input   type="checkbox" name="NON-VEG"  value="PRAWN">Prawn</td>
+                    </tr>
+                    <tr>
+                        <td><input   type="checkbox"name="NON-VEG"  value="PAROTA" >Parato</td>
+                        <td><input  type="checkbox"name="NON-VEG"  value= "CHICKEN LOLOPOP">Chicken lolipop</td>
+                        </tr>
+                        <tr>
+                            <td><input   type="checkbox"name="NON-VEG"  value= "KUSKA">Kuska</td>
+                            <td><input   type="checkbox" name="NON-VEG"  value="CHICKEN FRIED RICE">Chicken Fried Rice</td>
+                            </tr>
+                            <tr>
+                                <td><input   type="checkbox" name="NON-VEG"  value="VEG BRIYANI">Veg Briyani</td>
+                                <td><input  type="checkbox"name="NON-VEG"  value= "CHICKEN NOODELES">Chicken Noodeles</td>
+                                </tr>
+                                <tr>
+                                    <td><input type="checkbox"name="NON-VEG"  value= "MASUROOM BRIYANI">Masuroom Briyani</td>
+                                    <td><input   type="checkbox"name="NON-VEG"  value= "CHICKEN MANJURION">Chicken Manjurion</td>
+                                    </tr>
+</table>
+</div>
+<button onclick="my()">SUBMIT</button>
+<script>
+    function my() 
+    {
+        var x = document.getElementsByName("VEG");
+        var i ;
+        var veg = [];
+        var checkVeg;
+        for(i=0;i<x.length;i++) 
+        {
+            if(x[i].checked == true)
+            {
+              checkVeg = true;  
+              veg[i] = x[i].value;
+            }
+        }
+        var y = document.getElementsByName("NON-VEG");
+        var j ;
+        var nonveg = [];
+        var checkNonVeg;
+        for(j=0;j<y.length;j++)
+         {
+            if(y[j].checked == true)
+            {
+              checkNonVeg = true;  
+              nonveg[j] = y[j].value;
+            }
+        }
+        if(checkVeg || checkNonVeg)
+        {
+            alert(veg+" "+nonveg);
+            alert(" Ordered Sucessfully...!!!");
+        }
+        else 
+        {
+            alert("Please take a  MENU Card");
+        }
+    }
+    </script>
+</body>
+</html>
